@@ -3,8 +3,8 @@
 Test of building an ELK (Elasticseach, Logstash, Kibana) stack with Fig and Docker.
 
 ## Installation and use
-1. Install [Docker](docker.io).
-2. Install [Fig](fig.sh).
+1. Install [Docker](http://docker.io).
+2. Install [Fig](http://fig.sh).
 3. Clone this repo
 4. Adjust Logstash / Elasticsearch configurations
 5. fig up
