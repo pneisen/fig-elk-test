@@ -1,4 +1,10 @@
+elasticsearch:
+  build: ./elasticsearch
+  expose:
+    - "9200"
 logstash:
   build: ./logstash
   ports:
     - "3333:3333"  
+  links:
+    - elasticsearch
