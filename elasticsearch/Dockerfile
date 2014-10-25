@@ -12,8 +12,11 @@ RUN mkdir /app
 ADD . /app
 RUN chmod +x /app/bin/boot
 
-# Inbound logstash port
+# Elasticsearch HTTP 
 EXPOSE 9200
 
-# Run logstash
+# Install kopf plugin
+RUN /opt/elasticsearch/bin/plugin -install lmenezes/elasticsearch-kopf
+
+# Run elasticsearch
 ENTRYPOINT ["/app/bin/boot"]

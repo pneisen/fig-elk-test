@@ -1,7 +1,7 @@
 elasticsearch:
   build: ./elasticsearch
-  expose:
-    - "9200"
+  ports:
+    - "9200:9200"
 logstash:
   build: ./logstash
   ports:
