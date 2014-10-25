@@ -7,7 +7,7 @@ RUN cd /tmp && \
     mv ./logstash-1.4.2 /opt/logstash && \
     rm ./logstash-1.4.2.tar.gz
 
-# Copy over logstash startup and cnfiguration files.
+# Copy over logstash startup and configuration files.
 RUN mkdir /app
 ADD . /app
 RUN chmod +x /app/bin/boot

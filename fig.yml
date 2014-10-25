@@ -8,3 +8,9 @@ logstash:
     - "3333:3333"  
   links:
     - elasticsearch
+kibana:
+  build: ./kibana
+  ports:
+    - "80:80"
+  links:
+    - elasticsearch
