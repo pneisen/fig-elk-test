@@ -1,0 +1,2 @@
+#!/bin/bash
+/opt/logstash/bin/logstash -f /app/conf/logstash.conf

@@ -1,0 +1,4 @@
+logstash:
+  build: ./logstash
+  ports:
+    - "3333:3333"  
