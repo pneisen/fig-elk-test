@@ -7,10 +7,13 @@ RUN cd /tmp && \
     mv ./elasticsearch-1.3.4 /opt/elasticsearch && \
     rm ./elasticsearch-1.3.4.tar.gz
 
-# Copy over elasticsearch startup and configuration files.
+# Copy over elasticsearch startup.
 RUN mkdir /app
 ADD . /app
 RUN chmod +x /app/bin/boot
+
+# Copy over the elastic search config.
+COPY ./conf/elasticsearch.yml /opt/elasticsearch/config/elasticsearch.yml
 
 # Elasticsearch HTTP 
 EXPOSE 9200
